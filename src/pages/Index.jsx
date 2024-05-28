@@ -45,23 +45,27 @@ const Index = () => {
   return (
     <Container maxW="container.xl" p={4} bgImage="url('https://images.unsplash.com/photo-1503455637927-730bce8583c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBzbG90JTIwdGVjaCUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzE2OTMyNDAxfDA&ixlib=rb-4.0.3&q=80&w=1080')" bgSize="cover" bgPosition="center" minH="100vh">
       <Box bg="rgba(255, 255, 255, 0.8)" p={4} borderRadius="md" boxShadow="md">
-        <HStack justifyContent="space-between" mb={4}>
-          <Text fontSize="2xl" fontWeight="bold">
-            Gaming Slot Tech
-          </Text>
-          <Menu>
-            <MenuButton as={IconButton} icon={<FaBars />} />
-            <MenuList maxH="200px" overflowY="auto">
-              <MenuItem>Purpose of this Website</MenuItem>
-              <MenuItem>Slot Machines</MenuItem>
-              <MenuItem>Gaming Slot Machines</MenuItem>
-              <MenuItem>Slot Machines Faultfinding</MenuItem>
-              <MenuItem>Game Changing</MenuItem>
-              <MenuItem>Tables Equipment</MenuItem>
-              <MenuItem>Contacts</MenuItem>
-              <MenuItem>Place</MenuItem>
-            </MenuList>
-          </Menu>
+        <HStack justifyContent="flex-end" mb={4}>
+          <Box>
+            <Text fontSize="2xl" fontWeight="bold">
+              Gaming Slot Tech
+            </Text>
+          </Box>
+          <Box>
+            <Menu>
+              <MenuButton as={IconButton} icon={<FaBars />} />
+              <MenuList maxH="200px" overflowY="auto">
+                <MenuItem>Purpose of this Website</MenuItem>
+                <MenuItem>Slot Machines</MenuItem>
+                <MenuItem>Gaming Slot Machines</MenuItem>
+                <MenuItem>Slot Machines Faultfinding</MenuItem>
+                <MenuItem>Game Changing</MenuItem>
+                <MenuItem>Tables Equipment</MenuItem>
+                <MenuItem>Contacts</MenuItem>
+                <MenuItem>Place</MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
         </HStack>
         <VStack spacing={4} align="stretch">
           <Box>
