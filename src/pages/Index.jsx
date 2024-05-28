@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container, Box, VStack, HStack, Text, Button, Input, Textarea, IconButton, Menu, MenuButton, MenuList, MenuItem, useToast } from "@chakra-ui/react";
 import { FaBars, FaPaperPlane } from "react-icons/fa";
 
@@ -8,6 +8,17 @@ const Index = () => {
   const [newAnswer, setNewAnswer] = useState("");
   const [selectedQuestion, setSelectedQuestion] = useState(null);
   const toast = useToast();
+
+  const saveQuestionsToLocalStorage = (questions) => {
+    localStorage.setItem("questions", JSON.stringify(questions));
+  };
+
+  useEffect(() => {
+    const storedQuestions = localStorage.getItem("questions");
+    if (storedQuestions) {
+      setQuestions(JSON.parse(storedQuestions));
+    }
+  }, []);
 
   const handlePostQuestion = () => {
     if (newQuestion.trim() === "") {
@@ -20,7 +31,9 @@ const Index = () => {
       });
       return;
     }
-    setQuestions([...questions, { question: newQuestion, answers: [] }]);
+    const updatedQuestions = [...questions, { question: newQuestion, answers: [] }];
+    setQuestions(updatedQuestions);
+    saveQuestionsToLocalStorage(updatedQuestions);
     setNewQuestion("");
   };
 
@@ -38,6 +51,7 @@ const Index = () => {
     const updatedQuestions = [...questions];
     updatedQuestions[index].answers.push(newAnswer);
     setQuestions(updatedQuestions);
+    saveQuestionsToLocalStorage(updatedQuestions);
     setNewAnswer("");
     setSelectedQuestion(null);
   };
