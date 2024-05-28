@@ -51,7 +51,7 @@ const Index = () => {
           </Text>
           <Menu>
             <MenuButton as={IconButton} icon={<FaBars />} />
-            <MenuList>
+            <MenuList maxH="200px" overflowY="auto">
               <MenuItem>Purpose of this Website</MenuItem>
               <MenuItem>Slot Machines</MenuItem>
               <MenuItem>Slot Machines Faultfinding</MenuItem>
