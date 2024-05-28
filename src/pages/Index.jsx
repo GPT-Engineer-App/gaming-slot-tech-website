@@ -54,6 +54,7 @@ const Index = () => {
             <MenuList maxH="200px" overflowY="auto">
               <MenuItem>Purpose of this Website</MenuItem>
               <MenuItem>Slot Machines</MenuItem>
+              <MenuItem>Gaming Slot Machines</MenuItem>
               <MenuItem>Slot Machines Faultfinding</MenuItem>
               <MenuItem>Game Changing</MenuItem>
               <MenuItem>Tables Equipment</MenuItem>
