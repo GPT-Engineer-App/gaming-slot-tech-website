@@ -72,6 +72,7 @@ const Index = () => {
                 <MenuItem>Purpose of this Website</MenuItem>
                 <MenuItem>Slot Machines</MenuItem>
                 <MenuItem>Gaming Slot Machines</MenuItem>
+                <MenuItem>Aristocrat</MenuItem>
                 <MenuItem>Slot Machines Faultfinding</MenuItem>
                 <MenuItem>Game Changing</MenuItem>
                 <MenuItem>Tables Equipment</MenuItem>
